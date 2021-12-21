@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//ham tostring dung de chuyen 1 mang ve dang chuoi ky tu cac phan tu duoc ngan cach voi nhau boi dau phay
+
+//vidu
+var lang = ['VietNam', 'Japan', 'China', "Kreoa"];
+console.log(lang);
+var arr = lang.toString();
+console.log(arr);
+
+//ham join() // chuyen doi cac phan tu tu mang thanh string, su dung join tu ngan cac giua cac phan tu da dang hon
+//vidu
+
+var str2 = lang.join(' ');
+console.log(str2);
+
+// ham push cai nao push truoc cai day vao mang truoc 
+//vidu
+ var arr = [];
+ arr.push(40);
+ arr.push(50);
+ arr.push(60);
+ console.log(arr);
+
+ //ham pop lay ra phan tu cuoi cung trong mang
+
+ var item = arr.pop()
+ console.log(arr);
+ console.log(item);
+
+// ham unshift() them mot phan tu vao dau mang 
+//vidu
+
+var arr1 = ['item1', 'item2', 'item3', 'item4']
+arr1.unshift('item44');
+console.log(arr1);
+
+// ham shift() lay ra phan tu dau tien cua mang dong thoi loai bo  khoi mang ban dau 
+//vidu
+
+var arr2 = [1, 2, 3, 4, 5, 3,1, 4];
+arr2.shift()
+console.log(arr2)
+
+//ham slice(start, end) lay ra cac phan tu tu mot mang theo vi tri index minh muon lay ket qua tra ve mot mang moi
+//vidu
+var arr3 = arr2.slice(2, 6);
+console.log(arr3);
+
+//ham filter() ham co chuc nang duyet qua tung phan tu trong mang sau do tra ve 1 mang co cac phan tu thoa man yeu cau duoc quy dinh trong
+//ham callback cua chinh no,
+//vidu
+var mang1 = [12, 32, 11, 22, 41, 11];
+var mang2 = mang1.filter(function(value){
+    return (value % 2 == 0)
+    // tra ve mot mang cac phan tu chia het cho hai 
+})
+console.log(mang2)
+
+//ham reverse() ham co chuc nang dao nguoi thu tu cua cac phan tu nam trong mang
+//vidu
+mang1.reverse();
+console.log(mang1);
+
+
+//ham splice co chuc nang chen them cac phan tu vao vi tri tuy y trong mang. Ben canh do ham cung co the xoa phan tu trong mang theo vi tri index
+//vidu
+
+var mang4 = [1, 3, 4, 6, 7 , 2];
+// console.log(mang4);
+// mang4.splice(2, 2, 13, 12,);
+
+// console.log(mang4)
+var mang5 = [1, 2, 3, 4, 5, 6, 7];
+// delete(mang5[3]);
+// mang5.filter(function(value){
+//     return (value<3 || value>4)
+// })
+
+mang5.splice(2,2);
+console.log(mang5)
+
+
+
+
+
+
+</script>
+</body>
+</html>
